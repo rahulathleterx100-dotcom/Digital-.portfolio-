@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul S - Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- General Reset ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeInDown 2s ease;
+    }
+    header img.profile {
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #fff;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      animation: bounceIn 2s ease;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    nav a.active {
+      color: #ffeb3b;
+      border-bottom: 2px solid #ffeb3b;
+      padding-bottom: 3px;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+    }
+
+    /* ---------- Lists ---------- */
+    ul {
+      list-style-type: none;
+      font-size: 1.1rem;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+
+    /* ---------- Skill Tags ---------- */
+    .skill-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    /* ---------- Project & Certificate Cards ---------- */
+    .project, .certificate {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .project:hover, .certificate:hover {
+      transform: translateY(-5px);
+    }
+    .project h3, .certificate h3 {
+      margin-bottom: 10px;
+      color: #ffeb3b;
+    }
+    .certificate a {
+      color: #ffeb3b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .certificate a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Get in Touch Form ---------- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px;
+      background: #ffeb3b;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #fdd835;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
+      margin-top: 50px;
+    }
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- ---------- Header ---------- -->
+  <header>
+    <img src="rahul.jpg" alt="Profile Photo" class="profile">
+    <h1>Rahul S</h1>
+    <p>B.Sc Computer Science | Web Developer</p>
+  </header>
+
+  <!-- ---------- Navigation ---------- -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#resume">Resume</a>
+    <a href="#getintouch">Get in Touch</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ---------- About ---------- -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science graduate with a strong interest in programming and databases.</p>
+  </section>
+
+  <!-- ---------- Education ---------- -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Chinnaswamy Ammal Boys School (SSLC)</li>
+      <li>Veera Shivaji Vidhayalaya Hr Sec School (HSC)</li>
+      <li>B.Sc. Computer Science</li>
+    </ul>
+  </section>
+
+  <!-- ---------- Skills ---------- -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <span class="skill-tag">C</span>
+      <span class="skill-tag">C++</span>
+      <span class="skill-tag">Python</span>
+    </div>
+  </section>
+
+  <!-- ---------- Projects ---------- -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>My personal responsive portfolio website.</p>
+    </div>
+  </section>
+
+  <!-- ---------- Certificates ---------- -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate">
+      <h3>Naan Mudhalvan Certificate</h3>
+      <a href="NM_Certificate (1).pdf" target="_blank">📄 View Certificate</a>
+    </div>
+    <div class="certificate">
+      <h3>MongoDB Certificate</h3>
+      <a href="Completion Certificate _ SkillsBuild (1).pdf" target="_blank">📄 View Certificate</a>
+    </div>
+  </section>
+
+  <!-- ---------- Resume ---------- -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>📄 <a href="resume.pdf" target="_blank">Download My Resume</a></p>
+  </section>
+
+  <!-- ---------- Get in Touch ---------- -->
+  <section id="getintouch">
+    <h2>Get in Touch</h2>
+    <form action="mailto:rahulathleterx100@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ---------- Contact ---------- -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:rahulathleterx100@gmail.com">rahulathleterx100@gmail.com</a></p>
+    <p>🌐 <a href="https://github.com/rahul" target="_blank">GitHub</a> | 
+       💼 <a href="https://linkedin.com/in/rahul" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <p>© 2025 Rahul S | Built with ❤️</p>
+  </footer>
+
+  <!-- ---------- JavaScript ---------- -->
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const reveal = () => {
+      const trigger = window.innerHeight - 100;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) {
+          sec.classList.add("show");
+        }
+      });
+    };
+
+    // Highlight active nav link
+    const highlightNav = () => {
+      let current = "";
+      sections.forEach(sec => {
+        const secTop = sec.offsetTop - 120;
+        if (scrollY >= secTop) current = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.remove("active");
+        if (a.getAttribute("href") === "#" + current) {
+          a.classList.add("active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      reveal();
+      highlightNav();
+    });
+
+    // Initial check
+    reveal();
+    highlightNav();
+  </script>
+</body>
+</html>
